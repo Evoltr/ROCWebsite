@@ -121,3 +121,10 @@ label {
 input[type=submit]:hover {
     background-color: #45a049;
 }
+
+#video {
+    width: 55%;
+    border-radius: 2%;
+    padding-top: 2%;
+    float: left;
+}
