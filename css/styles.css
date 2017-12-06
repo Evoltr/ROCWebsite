@@ -1,3 +1,15 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300,400);
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+/*  Change this to the background color*/
+    background: #ebebeb; 
+}
+
 #navigation li {
     list-style: none;
     display: block;
