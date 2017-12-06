@@ -1,8 +1,17 @@
 var videoPlayer;
+var playPauseButton;
+var muteButton;
+var progressBar;
 
 function initVideoPlayer() {
     videoPlayer = document.getElementById("videoplayer");
     videoPlayer.controls = false;
+    videoPlayer.addEventListener('timeupdate', updateProgressBar, false);
+
+
+    playPauseButton = document.getElementById('play-pause-button');
+    muteButton = document.getElementById('mute-button');
+    progressBar = document.getElementById('progress-bar');
 }
 
 document.addEventListener("DOMContentLoaded", function() {
@@ -31,14 +40,19 @@ function changeButtonType(button, value) {
 }
 
 function stopPlayer() {
-    videoPlayer.pause;
     videoplayer.currentTime = 0;
+    videoPlayer.pause();
 }
 
 function changeVolume(direction) {
     if (direction === '+') videoPlayer.volume += videoPlayer.volume == 1 ? 0 : 0.1;
     else mediaPlayer.volume -= (videoPlayer.volume == 0 ? 0 : 0.1);
     videoPlayer.volume = parseFloat(videoPlayer.volume).toFixed(1);
+}
+
+function replayVideo() {
+    resetPlayer();
+    videoPlayer.play();
 }
 
 function toggleMute() {
@@ -52,3 +66,23 @@ function toggleMute() {
         videoPlayer.muted = true;
     }
 }
+
+function resetPlayer() {
+    videoPlayer.currentTime = 0;
+    changeButtonType(playPauseButton, 'play');
+}
+
+function updateProgressBar() {
+    var progressBar = document.getElementById('progress-bar');
+    var percentage = Math.floor((100 / videoPlayer.duration) *
+        videoPlayer.currentTime);
+    progressBar.value = percentage;
+    progressBar.innerHTML = percentage + '% played';
+}
+
+function resetPlayer() {
+    progressBar.value = 0;
+    videoPlayer.currentTime = 0;
+    changeButtonType(playPauseButton, 'play');
+}
+

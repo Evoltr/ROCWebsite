@@ -26,20 +26,24 @@
 </div>
 
 <main>
+    <h2>Hieronder een impressie van wat u kunt verwachten:</h2>
     <div id="video">
         <div id="video1" style='display: block'>
             <video id="videoplayer" controls width="80%" preload poster="images/video.jpg">
                 <source src="assets/video/video.mp4" type="video/mp4">
             </video>
             <div id='video-controls'>
+                <progress id='progress-bar' min='0' max='100' value='0'>0% played</progress>
                 <button id="play-pause-button" class="play" title="play" onClick="togglePlayPause();">Play</button>
                 <button id='stop-button' class='stop' title='stop' onclick='stopPlayer();'>Stop</button>
                 <button id='volume-plus-button' class='volume-plus' title='increase volume'
                         onclick='changeVolume("+");'>Increase volume</button>
                 <button id='volume-min-button' class='volume-min' title='decrease volume'
                         onclick='changeVolume("-");'>Decrease volume</button>
-                <button id="mute" class="mute" title="mute"
-                        onclick="toggleMute();">Mute</button>
+                <button id="mute-button" class="mute" title="mute"
+                        onclick="toggleMute(true);">Mute</button>
+                <button id="replay-button" class="replay" title="replay"
+                        onclick="replayVideo();">Replay</button>
             </div>
         </div>
     </div>
