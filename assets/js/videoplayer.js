@@ -12,6 +12,23 @@ function initVideoPlayer() {
     playPauseButton = document.getElementById('play-pause-button');
     muteButton = document.getElementById('mute-button');
     progressBar = document.getElementById('progress-bar');
+
+
+    videoPlayer.addEventListener('play', function() {
+        var button = document.getElementById('play-pause-button');
+        changeButtonType(button, 'pause');
+    }, false);
+    videoPlayer.addEventListener('pause', function() {
+        var button = document.getElementById('play-pause-button');
+        changeButtonType(button, play);
+    }, false);
+
+    videoPlayer.addEventListener('volumechange', function(e) {
+        var button = document.getElementById('mute-button');
+        if (videoPlayer.muted) changeButtonType(button, 'unmute');
+        else changeButtonType(button, 'mute');
+    }, false);
+
 }
 
 document.addEventListener("DOMContentLoaded", function() {
@@ -46,7 +63,7 @@ function stopPlayer() {
 
 function changeVolume(direction) {
     if (direction === '+') videoPlayer.volume += videoPlayer.volume == 1 ? 0 : 0.1;
-    else mediaPlayer.volume -= (videoPlayer.volume == 0 ? 0 : 0.1);
+    else videoPlayer.volume -= (videoPlayer.volume == 0 ? 0 : 0.1);
     videoPlayer.volume = parseFloat(videoPlayer.volume).toFixed(1);
 }
 
@@ -74,8 +91,7 @@ function resetPlayer() {
 
 function updateProgressBar() {
     var progressBar = document.getElementById('progress-bar');
-    var percentage = Math.floor((100 / videoPlayer.duration) *
-        videoPlayer.currentTime);
+    var percentage = Math.floor((100 / videoPlayer.duration) * videoPlayer.currentTime);
     progressBar.value = percentage;
     progressBar.innerHTML = percentage + '% played';
 }
@@ -85,4 +101,3 @@ function resetPlayer() {
     videoPlayer.currentTime = 0;
     changeButtonType(playPauseButton, 'play');
 }
-
