@@ -1,0 +1,75 @@
+#bandinfo{
+    overflow:hidden;
+    width: 100%;
+}
+
+body{
+    background-color: #361919;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+body::after {
+    content: "";
+    background-image:url(https://i0.wp.com/heerlijkemuziek.nl/wp-content/uploads/2016/07/intro.jpg?resize=1400%2C933);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100%;
+    opacity: 0.3;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: fixed;
+    z-index: -1;
+}
+
+p.koptekst{
+    font-size: 3em;
+    color:white;
+    text-align:center;
+    font-family: "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+p.bijtekst{
+    font-size: 1.5em;
+    color:white;
+    text-align:center;
+    font-family: "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+
+p.persoonbeschrijving{
+    margin-left: 12.5%;
+    width: 12.5%;
+    font-size: 1em;
+    color: white;
+    float:left;
+    font-family: "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+p.persoonbeschrijving2{
+    margin-left: 6.8%;
+    width: 12.5%;
+    font-size: 1em;
+    color: white;
+    float:left;
+    font-family: "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+.clara{
+    border-radius: 5em;
+    margin-left: 10.5%;
+    width: 100%;
+    max-width: 280px;
+    height: auto;
+}
+.clara2{
+    border-radius: 5em;
+    width: 100%;
+    max-width: 280px;
+    height: auto;
+}
+.blijeklanten{
+    font-size: 2em;
+    text-align: center;
+    color: white;
+    font-family: "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
