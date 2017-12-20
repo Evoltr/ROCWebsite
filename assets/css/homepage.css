@@ -25,6 +25,49 @@ body::after {
     z-index: -1;
 }
 
+p.beschrijvingmuziek{
+    margin-left: 1%;
+    width: 12.5%;
+    font-size: 1em;
+    color: white;
+    float:left;
+    font-family: "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+p.beschrijvingmuziek2{
+    margin-left: 10.125%;
+    width: 12.5%;
+    font-size: 1em;
+    color: white;
+    float:left;
+    font-family: "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+
+#audiodiv{
+    margin-left: 8%;
+}
+
+p.muziektitels{
+    margin-left: 2.5%;
+    color:white;
+    float:left;
+    font-size: 1.5em;
+    font-family: "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+.geluid{
+    margin-left: 8%;
+    float: left;
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    margin-top: 5%;
+}
+.geluid2{
+    margin-left:1%;
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    margin-top: 5%;
+}
 p.koptekst{
     font-size: 3em;
     color:white;
