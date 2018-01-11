@@ -14,16 +14,16 @@ function initVideoPlayer() {
     progressBar = document.getElementById('progress-bar');
 
 
-    videoPlayer.addEventListener('play', function() {
+    videoPlayer.addEventListener('play', function () {
         var button = document.getElementById('play-pause-button');
         changeButtonType(button, 'pause');
     }, false);
-    videoPlayer.addEventListener('pause', function() {
+    videoPlayer.addEventListener('pause', function () {
         var button = document.getElementById('play-pause-button');
         changeButtonType(button, play);
     }, false);
 
-    videoPlayer.addEventListener('volumechange', function(e) {
+    videoPlayer.addEventListener('volumechange', function (e) {
         var button = document.getElementById('mute-button');
         if (videoPlayer.muted) changeButtonType(button, 'unmute');
         else changeButtonType(button, 'mute');
@@ -31,9 +31,9 @@ function initVideoPlayer() {
 
 }
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
     initVideoPlayer();
-    }, false);
+}, false);
 
 function togglePlayPause() {
     var button = document.getElementById("play-pause-button");

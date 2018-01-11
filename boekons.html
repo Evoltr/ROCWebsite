@@ -8,38 +8,35 @@
 </head>
 <body>
 <div id="navigation_container">
-    <div class="l-triangle-top"></div>
-    <div class="l-triangle-bottom"></div>
     <div class="rectangle">
         <ul id="navigation">
             <li><a href="index.html">De Band</a></li>
             <li><a href="audio.html">Audio</a></li>
             <li><a href="video.html">Video</a></li>
-            <li><a href="contact.html">Blije klanten</a></li>
-            <li><a href="contact.html">Blog</a></li>
+            <li><a href="recensies.html">Recensies</a></li>
+            <li><a href="blog.html">Blog</a></li>
             <li><a href="boekons.html">Boek ons!</a></li>
         </ul>
     </div>
-    <div class="r-triangle-top"></div>
-    <div class="r-triangle-bottom"></div>
 </div>
 
 <div class="container">
     <form style="width: 500px">
+        <fieldset>
+            <legend>Boek ons!</legend>
+            <label for="fname">Uw naam (Verplicht)</label>
+            <input type="text" id="fname" name="naam" placeholder="Je naam">
+            <label for="fmail">Uw email (Verplicht)</label>
+            <input type="text" id="fmail" name="email" placeholder="Je email">
+            <label for="fdate">Datum (Verplicht)</label>
+            <input type="text" id="fdate" name="date" placeholder="dd/mm/yy">
+            <label for="fsubject">Onderwerp</label>
+            <input type="text" id="fsubject" name="subject" placeholder="Onderwerp">
+            <label for="fmessage">Bericht</label>
+            <textarea id="fmessage" name="message" placeholder="Bericht" style="height:200px"></textarea>
 
-        <label for="fname">Uw naam (Verplicht)</label>
-        <input type="text" id="fname" name="naam" placeholder="Je naam">
-        <label for="fmail">Uw email (Verplicht)</label>
-        <input type="text" id="fmail" name="email" placeholder="Je email">
-        <label for="fdate">Datum (Verplicht)</label>
-        <input type="text" id="fdate" name="date" placeholder="dd/mm/yy">
-        <label for="fsubject">Onderwerp</label>
-        <input type="text" id="fsubject" name="subject" placeholder="Onderwerp">
-        <label for="fmessage">Bericht</label>
-        <textarea id="fmessage" name="message" placeholder="Bericht" style="height:200px"></textarea>
-
-        <input type="submit" value="Submit">
-
+            <input type="submit" value="Submit">
+        </fieldset>
     </form>
 </div>
 </body>
