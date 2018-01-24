@@ -75,12 +75,6 @@ p.koptekst{
     text-align:center;
     font-family: "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 }
-p.bijtekst{
-    font-size: 1.5em;
-    color:white;
-    text-align:center;
-    font-family: "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-}
 
 p.persoonbeschrijving{
     margin-left: 12.5%;
@@ -107,13 +101,8 @@ p.persoonbeschrijving2{
 }
 .clara2{
     border-radius: 5em;
+    margin-left: 10px;
     width: 100%;
     max-width: 280px;
     height: auto;
-}
-.header{
-    font-size: 2em;
-    text-align: center;
-    color: white;
-    font-family: "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 }
