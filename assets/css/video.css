@@ -33,10 +33,15 @@ button {
 
 h2 {
     color: white;
-    margin-left: 28%;
-    margin-top: 8%;
+    margin-left: 5%;
+    margin-top: 4%;
 }
 
+h3 {
+	color: white;
+	margin-left: 25%;
+	margin-top: 0%;
+}
 #video {
     margin-left: 25%;
     margin-right: 25%;
